@@ -12,7 +12,7 @@ def setup_trakt():
     trakt.core.BASE_URL = "https://api.trakt.tv"
     trakt.core.CONFIG_PATH = "./pytrakt.json"
     init(
-        "karelka",
+        os.getenv("TRAKT_USERNAME"),
         client_id=os.getenv("TRAKT_CLIENT_ID"),
         client_secret=os.getenv("TRAKT_CLIENT_SECRET"),
         store=True,
