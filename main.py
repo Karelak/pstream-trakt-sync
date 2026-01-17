@@ -173,17 +173,6 @@ for row in rows:
             {"type": media_type, "title": title, "tmdb_id": tmdb_id, "error": str(e)}
         )
 
-# Save sync results
-sync_data = {
-    "synced_count": len(synced_items),
-    "failed_count": len(failed_items),
-    "synced_items": synced_items,
-    "failed_items": failed_items,
-}
-
-with open("syncdata.json", "w") as f:
-    json.dump(sync_data, indent=4, fp=f)
-
 logger.info("=== Sync Complete ===")
 logger.info(f"Synced: {len(synced_items)} items")
 if failed_items:
