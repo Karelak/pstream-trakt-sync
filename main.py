@@ -1,7 +1,6 @@
 import os
 import json
 import logging
-from datetime import datetime
 from dotenv import load_dotenv
 import psycopg2
 import trakt.core
